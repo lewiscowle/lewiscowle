@@ -4,6 +4,7 @@ body {
   color: #e0e0e0;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .container {
@@ -44,6 +45,27 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.download-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.download-btn:hover {
+  background-color: #b49f89;
+  transform: translateY(-2px);
 }
 
 .main {
