@@ -127,45 +127,45 @@
       margin-bottom: 0.5rem;
     }
 
-    .tech-logos {
-      background-color: #3a3a3a;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-    }
-
-    .logo-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo-pair {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .logo-container img {
-      height: 60px;
-      object-fit: contain;
-      filter: brightness(0.9);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .logo-container img:hover {
-      transform: scale(1.05);
-    }
-
     @media (max-width: 768px) {
       .main {
         flex-direction: column;
       }
 
-      aside, main {
+      aside,
+      main {
         padding: 1rem;
       }
+    }
+
+    .tech-logos {
+      background-color: #3a3a3a;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo-pair {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .logo-container img {
+      height: 60px;
+      width: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -182,7 +182,7 @@
   <div class="container">
     <header>
       <h1>LEWIS COWLE</h1>
-      <p>Hassocks, BN6 9NT<br>07904 290045<br><a href="mailto:lewis@cowle.eu">lewis@cowle.eu</a></p>
+      <p>Hassocks, BN6 9NT<br />07904 290045<br /><a href="mailto:lewis@cowle.eu">lewis@cowle.eu</a></p>
     </header>
 
     <div class="main">
@@ -222,7 +222,7 @@
         <section>
           <h2>Education</h2>
           <h3>Downlands Community School</h3>
-          <p>Sep 2017 – Jul 2022<br>GCSE</p>
+          <p>Sep 2017 – Jul 2022<br />GCSE</p>
           <ul>
             <li>English Language (7)</li>
             <li>Mathematics (7)</li>
@@ -235,7 +235,7 @@
           </ul>
 
           <h3>The College of Richard Collyer</h3>
-          <p>Sep 2022 – Jul 2024<br>A–Levels</p>
+          <p>Sep 2022 – Jul 2024<br />A–Levels</p>
           <ul>
             <li>Mathematics (C)</li>
             <li>Computer Science (B)</li>
@@ -263,20 +263,20 @@
       <div class="logo-container">
         <!-- AutoCAD + Fusion 360 -->
         <div class="logo-pair">
-          <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
-          <img src="fusion.png" alt="Fusion 360 Logo">
+          <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo" title="AutoCAD" />
+          <img src="fusion.png" alt="Fusion 360 Logo" title="Fusion 360" />
         </div>
 
         <!-- HTML + CSS -->
         <div class="logo-pair">
-          <img src="html.webp" alt="HTML Logo">
-          <img src="css.webp" alt="CSS Logo">
+          <img src="html.webp" alt="HTML Logo" title="HTML" />
+          <img src="css.webp" alt="CSS Logo" title="CSS" />
         </div>
 
         <!-- Remaining logos -->
-        <img src="easyeda.png" alt="EasyEDA Logo">
-        <img src="python.webp" alt="Python Logo">
-        <img src="sql.png" alt="SQL Logo">
+        <img src="easyeda.png" alt="EasyEDA Logo" title="EasyEDA" />
+        <img src="python.webp" alt="Python Logo" title="Python" />
+        <img src="sql.png" alt="SQL Logo" title="SQL" />
       </div>
     </section>
   </div>
