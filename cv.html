@@ -147,20 +147,42 @@
       align-items: center;
     }
 
-    .logo-pair {
+    .logo-item {
+      position: relative;
       display: flex;
-      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .logo-container img {
+    .logo-item img {
       height: 60px;
       object-fit: contain;
       filter: brightness(0.9);
       transition: transform 0.2s ease-in-out;
     }
 
-    .logo-container img:hover {
+    .logo-item:hover img {
       transform: scale(1.05);
+    }
+
+    .logo-item span {
+      position: absolute;
+      bottom: -1.5rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #e0e0e0;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .logo-item:hover span {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     @media (max-width: 768px) {
@@ -266,22 +288,34 @@
     <!-- Tech Logo Block -->
     <section class="tech-logos">
       <div class="logo-container">
-        <!-- AutoCAD + Fusion 360 -->
-        <div class="logo-pair">
+        <div class="logo-item">
           <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
+          <span>AutoCAD</span>
+        </div>
+        <div class="logo-item">
           <img src="fusion.png" alt="Fusion 360 Logo">
+          <span>Fusion 360</span>
         </div>
-
-        <!-- HTML + CSS -->
-        <div class="logo-pair">
+        <div class="logo-item">
           <img src="html.webp" alt="HTML Logo">
-          <img src="css.webp" alt="CSS Logo">
+          <span>HTML</span>
         </div>
-
-        <!-- Remaining logos -->
-        <img src="easyeda.png" alt="EasyEDA Logo">
-        <img src="python.webp" alt="Python Logo">
-        <img src="sql.png" alt="SQL Logo">
+        <div class="logo-item">
+          <img src="css.webp" alt="CSS Logo">
+          <span>CSS</span>
+        </div>
+        <div class="logo-item">
+          <img src="easyeda.png" alt="EasyEDA Logo">
+          <span>EasyEDA</span>
+        </div>
+        <div class="logo-item">
+          <img src="python.webp" alt="Python Logo">
+          <span>Python</span>
+        </div>
+        <div class="logo-item">
+          <img src="sql.png" alt="SQL Logo">
+          <span>SQL</span>
+        </div>
       </div>
     </section>
   </div>
