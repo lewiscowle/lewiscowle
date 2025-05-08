@@ -152,10 +152,27 @@
       object-fit: contain;
       filter: brightness(0.9);
       transition: transform 0.2s ease-in-out;
+      position: relative; /* Position text relative to the image */
     }
 
     .logo-container img:hover {
       transform: scale(1.05);
+    }
+
+    /* Add text when hovering over the icons */
+    .logo-container img:hover::after {
+      content: attr(alt); /* Display the text from the alt attribute */
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      margin-top: 8px; /* Adjust this space between the icon and text */
     }
 
     @media (max-width: 768px) {
@@ -263,20 +280,20 @@
       <div class="logo-container">
         <!-- AutoCAD + Fusion 360 -->
         <div class="logo-pair">
-          <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
-          <img src="fusion.png" alt="Fusion 360 Logo">
+          <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD">
+          <img src="fusion.png" alt="Fusion 360">
         </div>
 
         <!-- HTML + CSS -->
         <div class="logo-pair">
-          <img src="html.webp" alt="HTML Logo">
-          <img src="css.webp" alt="CSS Logo">
+          <img src="html.webp" alt="HTML">
+          <img src="css.webp" alt="CSS">
         </div>
 
         <!-- Remaining logos -->
-        <img src="easyeda.png" alt="EasyEDA Logo">
-        <img src="python.webp" alt="Python Logo">
-        <img src="sql.png" alt="SQL Logo">
+        <img src="easyeda.png" alt="EasyEDA">
+        <img src="python.webp" alt="Python">
+        <img src="sql.png" alt="SQL">
       </div>
     </section>
   </div>
