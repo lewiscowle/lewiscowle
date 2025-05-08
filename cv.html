@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lewis Cowle - CV</title>
   <style>
     body {
@@ -127,31 +127,11 @@
       margin-bottom: 0.5rem;
     }
 
-    @media (max-width: 768px) {
-      .main {
-        flex-direction: column;
-      }
-
-      aside, main {
-        padding: 1rem;
-      }
-    }
-
-    /* New: Tech Logos Block */
     .tech-logos {
       background-color: #3a3a3a;
       padding: 1.5rem;
       border-radius: 10px;
       margin-top: 2rem;
-    }
-
-    .tech-logos h2 {
-      font-size: 1.6rem;
-      border-bottom: 1px solid #555;
-      padding-bottom: 0.4rem;
-      margin-bottom: 1rem;
-      color: #b49f89;
-      font-family: 'Playfair Display', serif;
     }
 
     .logo-container {
@@ -160,6 +140,11 @@
       gap: 1.5rem;
       justify-content: center;
       align-items: center;
+    }
+
+    .logo-pair {
+      display: flex;
+      gap: 1rem;
     }
 
     .logo-container img {
@@ -171,6 +156,16 @@
 
     .logo-container img:hover {
       transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      aside, main {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -263,15 +258,23 @@
       </main>
     </div>
 
-    <!-- New Tech Logos Section -->
+    <!-- Tech Logo Block -->
     <section class="tech-logos">
-      <h2>Technologies Used</h2>
       <div class="logo-container">
-        <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
-        <img src="css.webp" alt="CSS Logo">
+        <!-- AutoCAD + Fusion 360 -->
+        <div class="logo-pair">
+          <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
+          <img src="fusion.png" alt="Fusion 360 Logo">
+        </div>
+
+        <!-- HTML + CSS -->
+        <div class="logo-pair">
+          <img src="html.webp" alt="HTML Logo">
+          <img src="css.webp" alt="CSS Logo">
+        </div>
+
+        <!-- Remaining logos -->
         <img src="easyeda.png" alt="EasyEDA Logo">
-        <img src="fusion.png" alt="Fusion 360 Logo">
-        <img src="html.webp" alt="HTML Logo">
         <img src="python.webp" alt="Python Logo">
         <img src="sql.png" alt="SQL Logo">
       </div>
