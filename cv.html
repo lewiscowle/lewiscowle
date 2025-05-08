@@ -136,6 +136,42 @@
         padding: 1rem;
       }
     }
+
+    /* New: Tech Logos Block */
+    .tech-logos {
+      background-color: #3a3a3a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+
+    .tech-logos h2 {
+      font-size: 1.6rem;
+      border-bottom: 1px solid #555;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      color: #b49f89;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 60px;
+      object-fit: contain;
+      filter: brightness(0.9);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -226,6 +262,20 @@
         </section>
       </main>
     </div>
+
+    <!-- New Tech Logos Section -->
+    <section class="tech-logos">
+      <h2>Technologies Used</h2>
+      <div class="logo-container">
+        <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
+        <img src="css.webp" alt="CSS Logo">
+        <img src="easyeda.png" alt="EasyEDA Logo">
+        <img src="fusion.png" alt="Fusion 360 Logo">
+        <img src="html.webp" alt="HTML Logo">
+        <img src="python.webp" alt="Python Logo">
+        <img src="sql.png" alt="SQL Logo">
+      </div>
+    </section>
   </div>
 </body>
 </html>
