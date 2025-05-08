@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lewis Cowle - CV</title>
   <style>
     body {
@@ -127,6 +127,37 @@
       margin-bottom: 0.5rem;
     }
 
+    .tech-logos {
+      background-color: #3a3a3a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-pair {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 60px;
+      object-fit: contain;
+      filter: brightness(0.9);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.05);
+    }
+
     @media (max-width: 768px) {
       .main {
         flex-direction: column;
@@ -136,61 +167,6 @@
         padding: 1rem;
       }
     }
-
-    /* New section for tech logos */
-    .tech-logos {
-      margin-top: 3rem;
-      padding: 1.5rem;
-      background-color: #3a3a3a;
-      border-radius: 10px;
-    }
-
-    .logo-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .logo-pair {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
-
-    .tooltip-text {
-      visibility: hidden;
-      background-color: #444;
-      color: #fff;
-      text-align: center;
-      padding: 6px 10px;
-      border-radius: 6px;
-      position: absolute;
-      z-index: 1;
-      bottom: -35px;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      opacity: 0;
-      transition: opacity 0.3s;
-      font-size: 0.85rem;
-    }
-
-    .tooltip:hover .tooltip-text {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-    }
-
   </style>
 </head>
 <body>
@@ -282,46 +258,27 @@
       </main>
     </div>
 
-    <!-- Tech logos section -->
+    <!-- Tech Logo Block -->
     <section class="tech-logos">
       <div class="logo-container">
+        <!-- AutoCAD + Fusion 360 -->
         <div class="logo-pair">
-          <div class="tooltip">
-            <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo" />
-            <span class="tooltip-text">AutoCAD</span>
-          </div>
-          <div class="tooltip">
-            <img src="fusion.png" alt="Fusion 360 Logo" />
-            <span class="tooltip-text">Fusion 360</span>
-          </div>
+          <img src="autocad-logo-png_seeklogo-482394.png" alt="AutoCAD Logo">
+          <img src="fusion.png" alt="Fusion 360 Logo">
         </div>
 
+        <!-- HTML + CSS -->
         <div class="logo-pair">
-          <div class="tooltip">
-            <img src="html.webp" alt="HTML Logo" />
-            <span class="tooltip-text">HTML</span>
-          </div>
-          <div class="tooltip">
-            <img src="css.webp" alt="CSS Logo" />
-            <span class="tooltip-text">CSS</span>
-          </div>
+          <img src="html.webp" alt="HTML Logo">
+          <img src="css.webp" alt="CSS Logo">
         </div>
 
-        <div class="tooltip">
-          <img src="easyeda.png" alt="EasyEDA Logo" />
-          <span class="tooltip-text">EasyEDA</span>
-        </div>
-        <div class="tooltip">
-          <img src="python.webp" alt="Python Logo" />
-          <span class="tooltip-text">Python</span>
-        </div>
-        <div class="tooltip">
-          <img src="sql.png" alt="SQL Logo" />
-          <span class="tooltip-text">SQL</span>
-        </div>
+        <!-- Remaining logos -->
+        <img src="easyeda.png" alt="EasyEDA Logo">
+        <img src="python.webp" alt="Python Logo">
+        <img src="sql.png" alt="SQL Logo">
       </div>
     </section>
-
   </div>
 </body>
 </html>
