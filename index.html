@@ -87,14 +87,13 @@
       transform: translateY(-2px);
     }
 
-    /* Subtle highlight for Projects button */
     .links a.projects {
       background-color: var(--accent-color);
       color: #1a1a1a;
       font-weight: 600;
       box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.15);
       flex: 1 0 100%;
-      max-width: calc(2 * 150px + 20px); /* Two buttons width + gap */
+      max-width: calc(2 * 150px + 20px);
       margin-top: 10px;
       text-align: center;
     }
@@ -105,7 +104,6 @@
       box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.2);
     }
 
-    /* Tooltip for "Coming Soon" */
     .links a.projects::after {
       content: 'Coming Soon';
       position: absolute;
@@ -141,5 +139,32 @@
       🚧 Projects
     </a>
   </div>
+
+  <script>
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(ipData => {
+        const ip = ipData.ip;
+        const userAgent = navigator.userAgent;
+
+        fetch("https://ipapi.co/" + ip + "/json/")
+          .then(response => response.json())
+          .then(location => {
+            fetch("https://script.google.com/macros/s/AKfycbxuoWBaE3piXutyh4ebBEoF4Yv7jaO-pNccqKD8xebcLLpdn82Wql92EnCFUIWEYg/exec", {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                ip: ip,
+                city: location.city,
+                country: location.country_name,
+                userAgent: userAgent
+              })
+            });
+          });
+      });
+  </script>
 </body>
 </html>
