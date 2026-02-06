@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lewis Cowle | Projects</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300;500&display=swap');
+
+    :root {
+      --bg-color: #2c2c2c;
+      --card-bg: #3a3a3a;
+      --text-color: #e0e0e0;
+      --accent-color: #b49f89;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Work Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      opacity: 0.8;
+    }
+
+    .projects {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      background-color: #2a2a2a;
+      min-height: 220px;
+    }
+
+    .project-content h2 {
+      font-family: var(--font-heading);
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-align: center;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Projects</h1>
+    <p>Personal engineering and electronics work</p>
+  </header>
+
+  <section class="projects">
+
+    <!-- Air Purifier -->
+    <div class="project-card">
+      <img src="air-purifier.jpg" alt="3D Printed Air Purifier Project">
+      <div class="project-content">
+        <h2>Air Purifier</h2>
+        <p>
+          Air purifier that uses a high static pressure fan alongside a HEPA filter,
+          encased in a 3D printed case planned and designed using Fusion 360.
+          Modular components and tolerances were carefully considered throughout
+          the design process.
+        </p>
+      </div>
+    </div>
+
+    <!-- Message Board -->
+    <div class="project-card">
+      <img src="message-board.jpg" alt="LCD Message Board Project">
+      <div class="project-content">
+        <h2>Message Board</h2>
+        <p>
+          LCD message board utilising cloud-based MQTT transmissions and protocols.
+          Extensive use of custom code to handle communication, data display,
+          and remote updates.
+        </p>
+      </div>
+    </div>
+
+    <!-- Ammo Box Speaker -->
+    <div class="project-card">
+      <img src="ammo-speaker.jpg" alt="Ammo Box Bluetooth Speaker">
+      <div class="project-content">
+        <h2>Ammo Box Speaker</h2>
+        <p>
+          Bluetooth speaker made from an ammo box, amplifier, and speaker drivers.
+          Designed with careful consideration of power requirements, safety,
+          and acoustic performance.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <div style="text-align:center;">
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>
