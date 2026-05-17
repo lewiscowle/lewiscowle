@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lewis Cowle | Machines</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@300;500&display=swap');
+
+    :root {
+      --bg-color: #2c2c2c;
+      --text-color: #e0e0e0;
+      --accent-color: #b49f89;
+      --button-bg: #444;
+      --button-text: #fff;
+      --card-bg: #383838;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Work Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      padding: 60px 20px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-family: var(--font-heading);
+      color: var(--text-color);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      margin-bottom: 24px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--button-text);
+      background-color: var(--button-bg);
+      padding: 10px 24px;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .back-btn:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 36px;
+      opacity: 0.9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background-color: #333;
+    }
+
+    .card-body {
+      padding: 18px 20px 20px;
+    }
+
+    .card-body h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      background-color: var(--accent-color);
+      color: #1a1a1a;
+    }
+
+    /* fallback placeholder if image fails */
+    .card img.placeholder-img {
+      object-fit: contain;
+      padding: 20px;
+      filter: grayscale(0.3) brightness(0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lewis Cowle</h1>
+    <p>Machines I've Worked On</p>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </header>
+
+  <p class="section-label">Plant List — Travelling Wire Ltd</p>
+
+  <div class="grid">
+
+    <!-- Wire EDM -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_2083428277504c7ab135e89b4f1d4d9e~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/247605_258240134313749_889415462_n.jpg"
+        alt="Mitsubishi BA8 Wire Erosion"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Mitsubishi+BA8'"
+      />
+      <div class="card-body">
+        <h2>Mitsubishi BA8 Wire Erosion</h2>
+        <p>CNC Wire EDM machine used for precision cutting of complex profiles and tight-tolerance parts.</p>
+        <span class="badge">Wire EDM</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_f41bdd3788bd4b91b930d97f4cc1dc1a~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8177_JPG.jpg"
+        alt="Mitsubishi MV2400r"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Mitsubishi+MV2400r'"
+      />
+      <div class="card-body">
+        <h2>Mitsubishi MV2400r</h2>
+        <p>XYZ travel: 600 × 400 × 310 mm. High-accuracy wire erosion with advanced surface finish capability.</p>
+        <span class="badge">Wire EDM</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_21d3a3e261604dd4b87e3939314928a1~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/_DSF1148-2.jpg"
+        alt="Mitsubishi BA24 Wire Erosion"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Mitsubishi+BA24'"
+      />
+      <div class="card-body">
+        <h2>Mitsubishi BA24 Wire Erosion (2017)</h2>
+        <p>Submerged cutting capability. XYZ travel: 500 × 350 × 300 mm. Excellent for deep flush cutting and fine surface finishes.</p>
+        <span class="badge">Wire EDM</span>
+      </div>
+    </div>
+
+    <!-- Sinker EDM -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_c9adb2e947cf477f81eac78386683a7b~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/264521_258240174313745_76264570_n.jpg"
+        alt="Mitsubishi EX22 CNC Spark Erosion"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Mitsubishi+EX22'"
+      />
+      <div class="card-body">
+        <h2>Mitsubishi EX22 CNC Spark Erosion</h2>
+        <p>CNC sinker/die EDM for forming complex cavities and intricate electrode burns into hardened tooling steel.</p>
+        <span class="badge">Sinker EDM</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_ac6dd7818d41406f943ba7c3c1845c80~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8084.jpg"
+        alt="Sodick K1C EDM Fast Hole Drilling"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Sodick+K1C'"
+      />
+      <div class="card-body">
+        <h2>Sodick K1C EDM Fast Hole Drilling</h2>
+        <p>Specialised EDM drilling machine for producing start holes and small-diameter precision bores in hardened materials.</p>
+        <span class="badge">EDM Drilling</span>
+      </div>
+    </div>
+
+    <!-- Surface Grinding -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_9ac9a06c9bb0450d807b6ddf67c0a074~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8095.jpg"
+        alt="Surface Grinder XYZ 1632"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=XYZ+1632+Grinder'"
+      />
+      <div class="card-body">
+        <h2>Surface Grinder XYZ 1632 (2022)</h2>
+        <p>Precision surface grinding for achieving tight flatness and parallelism on tooling components and die plates.</p>
+        <span class="badge">Surface Grinding</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_3a976cfa78014d9997f92553ab64f108~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8098.jpg"
+        alt="Grinder J&S 540"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=J%26S+540+Grinder'"
+      />
+      <div class="card-body">
+        <h2>Grinder J&amp;S 540</h2>
+        <p>Jones &amp; Shipman surface grinder for high-precision flatwork on hardened steel tooling and dies.</p>
+        <span class="badge">Surface Grinding</span>
+      </div>
+    </div>
+
+    <!-- Lathe -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_ef0ac4411ec042018d0091f26d860f5d~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8088.jpg"
+        alt="Lathe"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Manual+Lathe'"
+      />
+      <div class="card-body">
+        <h2>Lathe</h2>
+        <p>Manual lathe used for turning, facing, and threading operations on round stock and tooling components.</p>
+        <span class="badge">Lathe</span>
+      </div>
+    </div>
+
+    <!-- CMM -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_3a69a42dee6e4ead9f0b3936de4a549d~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_8105.jpg"
+        alt="CMM Quantum 664"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=CMM+Quantum+664'"
+      />
+      <div class="card-body">
+        <h2>CMM Quantum 664</h2>
+        <p>Coordinate Measuring Machine for inspection and verification of precision-machined components against drawing tolerances.</p>
+        <span class="badge">Inspection / CMM</span>
+      </div>
+    </div>
+
+    <!-- Surface Grinder (SG12S) -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_21d3a3e261604dd4b87e3939314928a1~mv2.jpg/v1/fill/w_460,h_360,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/_DSF1148-2.jpg"
+        alt="Mitsubishi SG12S Surface Grinder"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=Mitsubishi+SG12S'"
+      />
+      <div class="card-body">
+        <h2>Mitsubishi SG12S</h2>
+        <p>XYZ: 400 × 300 × 300 mm. Maximum workpiece: 900 × 650 × 350 mm. Heavy-duty precision surface grinder.</p>
+        <span class="badge">Surface Grinding</span>
+      </div>
+    </div>
+
+    <!-- Cylindrical Grinder -->
+    <div class="card">
+      <img
+        src="https://static.wixstatic.com/media/05c759_cc5a32697e4c4ec6babd06b057f6e07b~mv2.jpg/v1/fill/w_460,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/376795_258240287647067_1272806631_n.jpg"
+        alt="J&S 1300 Cylindrical Grinder"
+        onerror="this.src='https://placehold.co/460x320/383838/b49f89?text=J%26S+1300+Cylindrical'"
+      />
+      <div class="card-body">
+        <h2>J&amp;S 1300 Cylindrical Grinder</h2>
+        <p>Jones &amp; Shipman cylindrical grinder for external and internal diameter grinding of round tooling.</p>
+        <span class="badge">Cylindrical Grinding</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
